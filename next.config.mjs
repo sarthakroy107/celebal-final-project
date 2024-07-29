@@ -2,11 +2,11 @@
 const nextConfig = {
   images: {
     remotePatterns: [{
-      port: "*",
-      hostname: "*/**",
-      pathname: "*/**",
+      port: "",
+      hostname: "**",
+      pathname: "/**",
     }]
-  }
+  },
 };
 
 export default nextConfig;
