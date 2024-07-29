@@ -35,7 +35,7 @@ export function Navbar() {
       </div>
       <div className="relative">
         <LucideSearch className="w-6 h-6 cursor-pointer absolute top-1 left-1" />
-        <Input className="h-8 rounded-none text-black px-7 bg-black" placeholder="Search" />
+        <Input className="h-8 rounded-none px-7 bg-black" placeholder="Search" />
       </div>
       <button className="ml-5 bg-[#f52935] px-3 rounded-full py-1 font-medium text-xs">
         Try quara premium
@@ -52,17 +52,17 @@ const navbarLinks: TNavbarLink[] = [
   },
   {
     title: "Followers",
-    href: "/followers",
+    href: "/",
     icon: LucideUserCheck,
   },
   {
     title: "Answer",
-    href: "/answer",
+    href: "/",
     icon: LucidePencil,
   },
   {
     title: "Notifications",
-    href: "/notifications",
+    href: "/",
     icon: LucideBell,
   },
 ];
