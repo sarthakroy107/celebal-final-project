@@ -1,4 +1,5 @@
 'use client';
+
 import { demoPosts } from "./data-lake";
 import { Post } from "./post";
 import { Writer } from "./write-post";

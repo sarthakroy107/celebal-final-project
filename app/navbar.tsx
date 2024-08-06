@@ -19,7 +19,7 @@ type TNavbarLink = {
   icon: LucideIcon;
 };
 
-export function Navbar() {
+export default function Navbar() {
   const router = useRouter();
   const name = window.localStorage.getItem("name");
   if(!name) {
