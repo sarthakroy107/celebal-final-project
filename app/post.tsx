@@ -41,15 +41,17 @@ export function Post({ id, since, text, upvotes, username, image }: TPost) {
       ) : (
         <p className="px-4 py-1.5 text-sm text-white/90">{text}</p>
       )}
-      <div className="p-1.5">
-        <Image
-          src="https://images3.alphacoders.com/134/1346314.jpeg"
-          alt="Post Image"
-          width={500}
-          height={500}
-          className="w-full"
-        />
-      </div>
+      {image && (
+        <div className="p-1.5">
+          <Image
+            src={image}
+            alt="Post Image"
+            width={500}
+            height={500}
+            className="w-full"
+          />
+        </div>
+      )}
       <div className="flex items-center px-2 py-1">
         <div className="px-3 rounded-full border border-white/20 flex items-center gap-x-2">
           <button

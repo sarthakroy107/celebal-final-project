@@ -10,6 +10,8 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 
 type TNavbarLink = {
   title: string;
@@ -18,6 +20,12 @@ type TNavbarLink = {
 };
 
 export function Navbar() {
+  const router = useRouter();
+  const name = window.localStorage.getItem("name");
+  if(!name) {
+    toast.error("You need to login first");
+    router.push("/login");
+  }
   return (
     <nav className="w-full flex justify-center items-center bg-[#262626] py-3 text-white">
       <Image
@@ -37,6 +45,7 @@ export function Navbar() {
         <LucideSearch className="w-6 h-6 cursor-pointer absolute top-1 left-1" />
         <Input className="h-8 rounded-none px-7 bg-black" placeholder="Search" />
       </div>
+      <p className="ml-3 text-sm">Welcom back, <b>{name}</b></p>
       <button className="ml-5 bg-[#f52935] px-3 rounded-full py-1 font-medium text-xs">
         Try quara premium
       </button>
